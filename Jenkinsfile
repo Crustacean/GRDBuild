@@ -1,6 +1,6 @@
 node{
 	stage('SCM Checkout'){
-	git credentialsId: '704e8946-62cb-463c-b0ad-c03bf5b21039', url: 'https://github.com/Crustacean/webApp.git'
+	git credentialsId: '704e8946-62cb-463c-b0ad-c03bf5b21039', url: 'https://github.com/Crustacean/GRDBuild.git'
 	echo "Code pulled successfully from Github"
 	}
 	stage('mvn package'){
