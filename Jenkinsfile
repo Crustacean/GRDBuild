@@ -4,7 +4,7 @@ node{
 	echo "Code pulled successfully from Github"
 	}
 	stage('mvn package'){
-	def mvnHome = tool name: 'M3', type: 'maven'
+	def mvnHome = tool name: 'maven', type: 'maven'
 	def mvnCMD = "${mvnHome}/bin/mvn"
 	bat "${mvnCMD} clean install"
 	bat "${mvnCMD} clean package"
