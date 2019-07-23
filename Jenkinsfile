@@ -5,9 +5,11 @@ node{
 	}
 	stage('mvn package'){
 	def mvnHome = tool name: 'M3', type: 'maven'
-	def mvnCMD = "${mvnHome}/bin/mvn"
-	bat "${mvnCMD} clean install"
-	bat "${mvnCMD} clean package"
+	def mvnCMD = "${mvnHome}/bin/mvn clean install"
+	def mvnCMD = "${mvnHome}/bin/mvn clean package"
+	//def mvnCMD = "${mvnHome}/bin/mvn"
+	//bat "${mvnCMD} clean install"
+	//bat "${mvnCMD} clean package"
 	echo "Build is successfull"
 	}
 	stage('Build Docker image'){
